@@ -3,9 +3,7 @@ group default {
 }
 
 target "image" {
-  args = {
-    PHP_PECL_EXTENSIONS = "apcu redis grpc protobuf opentelemetry"
-  }
+  args = {}
   platforms = ["linux/amd64", "linux/arm64"]
 }
 
