@@ -141,7 +141,6 @@ Installed extensions
   [x] phar
   [x] posix
   [ ] pspell
-  [x] random
   [x] readline
   [x] reflection
   [x] session
@@ -178,12 +177,15 @@ Disabled extensions
 
 INSTALLED PACKAGES, CHANNEL PECL.PHP.NET:
 =========================================
-PACKAGE VERSION STATE
-apcu    5.1.22  stable
-pcov    1.0.11  stable
-redis   5.3.7   stable
-xdebug  3.2.1   stable
-xhprof  2.3.9   stable
+PACKAGE       VERSION    STATE
+apcu          5.1.22     stable
+grpc          1.57.0     stable
+opentelemetry 1.0.0beta6 beta
+pcov          1.0.11     stable
+protobuf      3.24.2     stable
+redis         5.3.7      stable
+xdebug        3.2.2      stable
+xhprof        2.3.9      stable
 
 Composer
 ====================
@@ -213,3 +215,6 @@ EOF
 * [Spryker documentation](https://documentation.spryker.com)
 * [PHP supported versions](http://php.net/supported-versions.php)
 * [PHP official images](https://github.com/docker-library/php)
+
+
+    PHP_PECL_EXTENSIONS = "apcu redis grpc protobuf opentelemetry"

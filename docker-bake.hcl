@@ -1,23 +1,22 @@
 group default {
-  targets = ["82", "81"]
+  targets = ["81", "82"]
+}
+
+target "image" {
+  args = {
+    PHP_PECL_EXTENSIONS = "apcu redis grpc protobuf opentelemetry"
+  }
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "82" {
+  inherits = ["image"]
   dockerfile = "alpine/3.17/8.2/Dockerfile"
-  args = {
-    PHP_PECL_EXTENSIONS = "apcu redis opentelemetry"
-  }
-  platforms = ["linux/amd64", "linux/arm64"]
-  tags = ["spryker-php-otel:8.2"]
-  output = ["build"]
+  tags = ["bate/spryker-php-otel:8.2"]
 }
 
 target "81" {
+  inherits = ["image"]
   dockerfile = "alpine/3.17/8.1/Dockerfile"
-  args = {
-    PHP_PECL_EXTENSIONS = "apcu redis opentelemetry"
-  }
-  platforms = ["linux/amd64", "linux/arm64"]
-  tags = ["spryker-php-otel:8.1"]
-  output = ["build"]
+  tags = ["bate/spryker-php-otel:8.1"]
 }
