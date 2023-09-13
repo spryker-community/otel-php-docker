@@ -11,12 +11,12 @@ target "image" {
 
 target "82" {
   inherits = ["image"]
-  dockerfile = "alpine/3.17/8.2/Dockerfile"
+  dockerfile = "alpine/3.18/8.2/Dockerfile"
   tags = ["bate/spryker-php-otel:8.2"]
 }
 
 target "81" {
   inherits = ["image"]
-  dockerfile = "alpine/3.17/8.1/Dockerfile"
+  dockerfile = "alpine/3.18/8.1/Dockerfile"
   tags = ["bate/spryker-php-otel:8.1"]
 }
