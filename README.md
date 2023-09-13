@@ -219,6 +219,3 @@ EOF
 * [Spryker documentation](https://documentation.spryker.com)
 * [PHP supported versions](http://php.net/supported-versions.php)
 * [PHP official images](https://github.com/docker-library/php)
-
-
-    PHP_PECL_EXTENSIONS = "apcu redis grpc protobuf opentelemetry"
