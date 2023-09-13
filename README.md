@@ -109,7 +109,7 @@ Installed extensions
   [ ] enchant
   [ ] exif
   [ ] ext_skel.php
-  [ ] ffi
+  [x] ffi
   [x] fileinfo
   [x] filter
   [x] ftp
@@ -172,7 +172,7 @@ Installed extensions
 
 Disabled extensions
 ====================
- [ ] blackfire 1.87.1
+ [ ] blackfire 1.87.1~linux-musl-x64-non_zts81
  [ ] newrelic 10.11.0.3
  [ ] pcov 1.0.11
  [ ] tideways 5.5.14
@@ -180,23 +180,24 @@ Disabled extensions
 
 INSTALLED PACKAGES, CHANNEL PECL.PHP.NET:
 =========================================
-PACKAGE       VERSION    STATE
-apcu          5.1.22     stable
-grpc          1.57.0     stable
-opentelemetry 1.0.0beta6 beta
-pcov          1.0.11     stable
-protobuf      3.24.2     stable
-redis         5.3.7      stable
-xdebug        3.2.2      stable
-xhprof        2.3.9      stable
+PACKAGE       VERSION  STATE
+apcu          5.1.22   stable
+grpc          1.58.0   stable
+opentelemetry 1.0.0RC1 beta
+pcov          1.0.11   stable
+protobuf      3.24.3   stable
+redis         6.0.0    stable
+xdebug        3.2.2    stable
+xhprof        2.3.9    stable
 
 Composer
 ====================
 Composer version 2.5.8 2023-06-09 17:13:21
+
 ```
 ##### Run the following to get the report
 ```bash
-$ docker run -i --rm spryker/php:latest bash -s<<'EOF'
+docker run -i --rm spryker/php:latest bash -s<<'EOF'
     docker-php-source extract
     echo "Installed extensions";
     echo "====================";
