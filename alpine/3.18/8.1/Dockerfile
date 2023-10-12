@@ -96,7 +96,7 @@ RUN apk update \
     ${PHP_RUN_DEPS} \
     && \
     apk add --no-cache --virtual .php-build-deps ${PHP_BUILD_DEPS} \
-    && \ 
+    && \
     apk add --no-cache --virtual .graphviz-build-deps ${GRAPHVIZ_BUILD_DEPS} \
     && rm -rf /var/lib/apt/lists/ \
     && \
