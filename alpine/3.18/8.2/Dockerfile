@@ -4,7 +4,7 @@ ARG SPRYKER_PHP_VERSION=8.2.9
 FROM php:${SPRYKER_PHP_VERSION}-fpm-alpine3.18
 
 ARG TARGETPLATFORM
-ARG COMPOSER_VERSION=2.5.8
+ARG COMPOSER_VERSION=2.6.4
 ARG BLACKFIRE_VERSION=1.87.1
 ARG BLACKFIRE_PHP_VERSION=82
 ARG NEWRELIC_VERSION=10.11.0.3
@@ -71,6 +71,9 @@ ARG ADDITIONAL_PHP_PECL_EXTENSIONS="\
     xdebug \
     xhprof"
 
+ARG GRAPHVIZ_BUILD_DEPS="\
+    expat-dev"
+
 ARG CFLAGS="-I/usr/src/php"
 RUN apk update \
     && apk upgrade \
@@ -93,6 +96,8 @@ RUN apk update \
     ${PHP_RUN_DEPS} \
     && \
     apk add --no-cache --virtual .php-build-deps ${PHP_BUILD_DEPS} \
+    && \
+    apk add --no-cache --virtual .graphviz-build-deps ${GRAPHVIZ_BUILD_DEPS} \
     && rm -rf /var/lib/apt/lists/ \
     && \
     docker-php-ext-configure gd \
@@ -156,7 +161,8 @@ RUN cd /tmp && \
     ./configure && \
     make && \
     make install && \
-    rm -rf /tmp/graphviz-7.0.5
+    rm -rf /tmp/graphviz-7.0.5 && \
+    apk del --no-cache .graphviz-build-deps
 
 # Opcache
 RUN /usr/bin/install -d -m 777 /var/run/opcache
