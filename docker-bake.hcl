@@ -3,7 +3,9 @@ group default {
 }
 
 target "image" {
-  args = {}
+  args = {
+    SPRYKER_PHP_VERSION = "8.2.13"
+  }
   platforms = ["linux/amd64", "linux/arm64"]
 }
 
