@@ -1,7 +1,7 @@
 repo_name: spryker-community/otel-php-docker
-report_id: '08d4ce935093a86d5304e04ec2bbbede'
+report_id: fdce8c9571f4a247294ea05e44efac39
 repo_type: Public
-timestamp: '2023-11-09T17:22:59+00:00'
+timestamp: '2023-12-14T09:51:31+00:00'
 requested_by: bate
 provider: github
 branch: otel
@@ -17,7 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
-  detection_source: debian/bullseye/8.2/Dockerfile
+  detection_source: debian/bullseye/8.0/Dockerfile
   last_updated_by: alexanderM91
   last_updated_on: 2021-08-20 14:38:29.000000000 Z
 - name: Docker
@@ -47,7 +47,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source: ".github/workflows/security.yml"
+  detection_source: ".github/workflows/ci.yml"
   last_updated_by: Filip Sushko
   last_updated_on: 2023-02-28 15:32:03.000000000 Z
 - name: New Relic
@@ -70,6 +70,6 @@ tools:
   category: Build, Test, Deploy
   sub_category: Testing Frameworks
   image_url: https://img.stackshare.io/service/3502/6b9dfb07681dee602dbdf75d9393f07c_400x400.png
-  detection_source: debian/bullseye/8.2/Dockerfile
+  detection_source: alpine/3.15/8.0/Dockerfile
   last_updated_by: Mike Kalinin
   last_updated_on: 2020-07-24 09:36:09.000000000 Z
